@@ -28,32 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            Center1 = new ListBox();
+            Center2 = new ListBox();
+            canvasPanel = new Panel();
             SuspendLayout();
             // 
-            // label1
+            // Center1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(123, 110);
-            label1.Name = "label1";
-            label1.Size = new Size(117, 20);
-            label1.TabIndex = 0;
-            label1.Text = "CultureCompare";
+            Center1.Dock = DockStyle.Left;
+            Center1.ForeColor = Color.FromArgb(192, 0, 0);
+            Center1.FormattingEnabled = true;
+            Center1.Location = new Point(0, 0);
+            Center1.Name = "Center1";
+            Center1.Size = new Size(92, 576);
+            Center1.TabIndex = 0;
+            Center1.SelectedIndexChanged += Center1_SelectedIndexChanged;
+            // 
+            // Center2
+            // 
+            Center2.Dock = DockStyle.Right;
+            Center2.ForeColor = Color.FromArgb(0, 0, 192);
+            Center2.FormattingEnabled = true;
+            Center2.Location = new Point(1442, 0);
+            Center2.Name = "Center2";
+            Center2.Size = new Size(108, 576);
+            Center2.TabIndex = 1;
+            Center2.SelectedIndexChanged += Center2_SelectedIndexChanged;
+            // 
+            // canvasPanel
+            // 
+            canvasPanel.Dock = DockStyle.Fill;
+            canvasPanel.Location = new Point(92, 0);
+            canvasPanel.Name = "canvasPanel";
+            canvasPanel.Size = new Size(1350, 576);
+            canvasPanel.TabIndex = 2;
+            canvasPanel.Paint += canvasPanel_Paint;
             // 
             // CultureCompareForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(1550, 576);
+            Controls.Add(canvasPanel);
+            Controls.Add(Center2);
+            Controls.Add(Center1);
             Name = "CultureCompareForm";
             Text = "CultureCompare";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private ListBox Center1;
+        private ListBox Center2;
+        private Panel canvasPanel;
     }
 }

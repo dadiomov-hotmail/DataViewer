@@ -36,8 +36,6 @@ namespace DataViewer
     {
         private string Location;
         public static  MdsItem[] MDS;
-        public static double[,] DistancesMatrix;
-        public static string[]  CountryNames;
 
         public CultureLandscapeForm(string location)
         {
@@ -57,20 +55,6 @@ namespace DataViewer
                     double.Parse(data[i][1]), 
                     double.Parse(data[i][2]));
             }
-
-            /*var distancesFile = Path.Combine(Location, "CultureDistances.csv");
-
-            var data = Parsing.ParseCsvFile(distancesFile, false);
-            int nCountries = data.Length - 1;
-            DistancesMatrix = new double[nCountries, nCountries];
-            CountryNames = new string[nCountries];
-            for (int i = 0; i < nCountries; i++)
-            {
-                CountryNames[i] = data[i + 1][0];
-                for (int j = 0; j < nCountries; j++)
-                    DistancesMatrix[i, j] = double.Parse(data[i + 1][j + 1]);
-            }
-            */
         }
 
         protected override void OnPaint(PaintEventArgs e)
