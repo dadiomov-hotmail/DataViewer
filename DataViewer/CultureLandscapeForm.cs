@@ -81,6 +81,7 @@ namespace DataViewer
             int width = this.ClientSize.Width;
             int height = this.ClientSize.Height;
             g.Clear(this.BackColor);
+            var f = new Font(this.Font.FontFamily, 10, FontStyle.Regular);
 
             double minX = double.MaxValue;
             double minY = double.MaxValue;
@@ -100,7 +101,7 @@ namespace DataViewer
             brushes[1] = Brushes.DarkSlateBlue;
             brushes[2] = Brushes.Green;
             brushes[3] = Brushes.DarkViolet;
-            brushes[4] = Brushes.Orange;
+            brushes[4] = Brushes.DarkMagenta;
             brushes[5] = Brushes.Purple;
             brushes[6] = Brushes.Brown;
             brushes[7] = Brushes.DarkGreen;
@@ -114,7 +115,7 @@ namespace DataViewer
                 var p = new Point(
                     (int)( (width -60) * (mds.X - minX) / (maxX - minX)), 
                     (int)( (height-20) * (mds.Y - minY) / (maxY - minY)));
-                g.DrawString(mds.CountryName, this.Font, brushes[rand.Next(10)], p);
+                g.DrawString(mds.CountryName, f, brushes[rand.Next(10)], p);
             }
         }
 
