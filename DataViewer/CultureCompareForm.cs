@@ -12,9 +12,12 @@ namespace DataViewer
 {
     public partial class CultureCompareForm: System.Windows.Forms.Form
     {
-        public CultureCompareForm()
+        private string Location;
+
+        public CultureCompareForm(string location)
         {
             InitializeComponent();
+            Location = location;
         }
     }
 }

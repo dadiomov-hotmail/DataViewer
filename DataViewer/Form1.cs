@@ -69,8 +69,7 @@ namespace DataViewer
                     break;
 
                 default:
-                    MessageBox.Show("Unknown domain selected.");
-                    break;
+                    throw new Exception("Bad logic");
             }
         }
 
@@ -116,7 +115,8 @@ namespace DataViewer
                             if (cultureCompareForm != null)
                                 cultureCompareForm.Hide();
 
-                            cultureLandscapeForm ??= (CultureLandscapeForm)InitilizeSubform(new CultureLandscapeForm());
+                            cultureLandscapeForm ??= (CultureLandscapeForm)InitilizeSubform(
+                                new CultureLandscapeForm(Location));
                             cultureLandscapeForm.Show();
                             break;
 
@@ -124,7 +124,8 @@ namespace DataViewer
                             if (cultureLandscapeForm != null)
                                 cultureLandscapeForm.Hide();
 
-                            cultureCompareForm ??= (CultureCompareForm)InitilizeSubform(new CultureCompareForm());
+                            cultureCompareForm ??= (CultureCompareForm)InitilizeSubform(
+                                new CultureCompareForm(Location));
                             cultureCompareForm.Show();
                             break;
 
