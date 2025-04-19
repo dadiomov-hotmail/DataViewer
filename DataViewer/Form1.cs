@@ -98,10 +98,10 @@ namespace DataViewer
                     switch (DemographyMode)
                     {
                         case DemographyModeEnum.CultureLandscape:
-                            //InitilizeCultureLandscapeMode();
+                            InitilizeCultureLandscapeMode();
                             break;
                         case DemographyModeEnum.CultureCompare:
-                            //InitilizeCultureCompareMode();
+                            InitilizeCultureCompareMode();
                             break;
                         default:
                             throw new Exception("Unknown mode selected.");
@@ -123,6 +123,17 @@ namespace DataViewer
                 default:
                     throw new Exception("Unknown domain selected.");
             }
+        }
+
+        private void InitilizeCultureLandscapeMode()
+        {
+            TopModePanel.Controls.Clear();
+        }
+
+        private void InitilizeCultureCompareMode()
+        {
+            TopModePanel.Controls.Clear();
+
         }
 
         private void InitilizeFutureMode()
