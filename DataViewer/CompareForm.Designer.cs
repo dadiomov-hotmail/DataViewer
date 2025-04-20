@@ -1,6 +1,6 @@
 ﻿namespace DataViewer
 {
-    partial class CultureCompareForm
+    partial class CompareForm
     {
         /// <summary>
         /// Required designer variable.

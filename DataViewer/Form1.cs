@@ -84,14 +84,14 @@ namespace DataViewer
                     if (Enum.TryParse(selectedData, out DemographyModeEnum mode1))
                         DemographyMode = mode1;
                     else
-                        throw new Exception("BAd logic");
+                        throw new Exception("Bad logic");
                     break;
 
                 case DomainEnum.SyncFin:
                     if (Enum.TryParse(selectedData, out SyncFinModeEnum mode2))
                         SyncFinMode = mode2;
                     else
-                        throw new Exception("BAd logic");
+                        throw new Exception("Bad logic");
                     break;
 
                 default:
