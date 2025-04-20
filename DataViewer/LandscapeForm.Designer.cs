@@ -1,6 +1,6 @@
 ﻿namespace DataViewer
 {
-    partial class CultureLandscapeForm
+    partial class LandscapeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // CultureLandscapeForm
+            // LandscapeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1550, 573);
-            Name = "CultureLandscapeForm";
-            Text = "CultureLandscapeForm";
+            Name = "LandscapeForm";
+            Text = "LandscapeForm";
             ResumeLayout(false);
         }
 
