@@ -48,7 +48,7 @@ namespace DataViewer
             var data = Parsing.ParseCsvFile(mdsFile, false);
 
             MDS = new MdsItem[data.Length];
-            for(int i=0; i < data.Length; i++)
+            for(int i=1; i < data.Length; i++)
             {
                 MDS[i] = new MdsItem(
                     data[i][0], 

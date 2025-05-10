@@ -10,7 +10,8 @@ namespace DataViewer
     public enum DemographyModeEnum
     {
         CultureLandscape,
-        CultureCompare
+        CultureCompare,
+        IndicatorsLandscape
     };
     public enum SyncFinModeEnum
     {
@@ -27,6 +28,7 @@ namespace DataViewer
         private SyncFinModeEnum SyncFinMode;
 
         private CultureLandscapeForm cultureLandscapeForm = null;
+        private IndicatorsLandscapeForm indicatorsLandscapeForm = null;
         private CultureCompareForm cultureCompareForm = null;
         private SyncFinFutureForm syncFinFutureForm = null;
         private SyncFinSweepForm syncFinSweepForm = null;
@@ -127,6 +129,15 @@ namespace DataViewer
                             cultureCompareForm ??= (CultureCompareForm)InitilizeSubform(
                                 new CultureCompareForm(Location));
                             cultureCompareForm.Show();
+                            break;
+
+                        case DemographyModeEnum.IndicatorsLandscape:
+                            if (indicatorsLandscapeForm != null)
+                                indicatorsLandscapeForm.Show();
+
+                            indicatorsLandscapeForm ??= (IndicatorsLandscapeForm)InitilizeSubform(
+                                new IndicatorsLandscapeForm(Location));
+                            indicatorsLandscapeForm.Show();
                             break;
 
                         default:

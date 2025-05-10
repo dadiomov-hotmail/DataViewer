@@ -10,6 +10,9 @@
     <Compile Update="CultureLandscapeForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="IndicatorsLandscape.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LandscapeForm.cs">
       <SubType>Form</SubType>
     </Compile>
